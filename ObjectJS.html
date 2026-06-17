@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Object</title>
+</head>
+<body>
+    <script>
+        let myInfo={
+            name:"ANUJ",
+            age:19,
+            isMarried:false,
+            address:{
+                HouseNo:52,
+                area:"Suriyawan",
+                pincode:221404,
+                city:"Bhadohi",
+            },
+            course:"Btech",
+            branch:"CSE",
+            Year:2025,
+          /*  education:function(){
+                console.log("my education is"+ myInfo.course + myInfo.branch + "and" + myInfo.year);
+            } */
+           
+        }
+        // console.log(myInfo.education());
+        console.log(myInfo.address.city); // acess using  dot notation
+        console.log(myInfo["name"]); // acess bracket notation
+
+        // find object length
+        let keys= Object.keys(myInfo);
+        console.log (keys.length);
+
+        //delete object property
+            console.log(delete myInfo.name);
+            console.log(myInfo);
+
+            // print object's property using for loop
+             for( let i=0; i<keys.length;i++){
+                console.log("Objects keys" + myInfo[keys[i]]);
+             }
+
+            // print object's property using for loop
+
+            for( let i=0; i<keys.length;i++){
+                console.log("Objects keys" + ":" + myInfo[keys[i]]);
+
+            }
+
+            // create object using new keyword
+
+            let student= new Object();
+            student.name = "Anuj Upadhyay";
+            student.age = 19;
+            student.course = "Btech";
+            student.rollno = 2503201000247;
+
+            console.log(student)
+            
+
+
+    </script>
+</body>
+</html>

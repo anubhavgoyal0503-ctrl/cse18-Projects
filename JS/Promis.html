@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //   let myPromises=new Promise(function(resolve, reject){
+
+        //     let age =25;
+        //     if(age>=18){
+        //       resolve("valid age")
+        //     }
+        //     else{
+        //       reject("wait for next year");
+        //     }
+
+        //   })
+        //   myPromles
+        //   .then(result=>console.log(result))
+        //   .catch(error=>console.log(error))
+        //   .finally(console.log("Done"));
+
+          // asyn await....
+          
+          async function userData(){
+            try{
+            let response=await fetch ('https://dummyjson.com/products');
+            let responseData=await response.json();
+            console.log(responseData);
+          }
+          catch(error){
+            console.log(error);
+          }
+        }
+          userData();
+
+          // high error function
+          let num=[3,4,5,6,7];
+          let square=num.map(n=>n*2);
+          console.log(square);
+
+          //reduce;-
+          let sum=num.reduce((total,n)=>total+n);
+          console.log(sum);
+
+          let sorting=num
+
+          //for each
+          // the for each  function
+          let double
+
+          //IIFE -
+          (function(){
+            console.log("Modern JS");
+          })();
+
+          //short code foe above code using arrow
+
+          (msg=>console.log("Hello React"))()
+
+          //Local storage
+          let userInfo={
+            name:'Anuj',
+            age:19,
+            mob:8004461561,
+            email:'xyzgmail.com',
+        };
+
+        localStorage.setItem('userInfo' ,JSON.stringify(userInfo));
+
+        
+          
+
+
+    </script>
+</body>
+</html>

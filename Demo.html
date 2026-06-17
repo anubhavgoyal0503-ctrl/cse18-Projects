@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <script>
+
+        var myName="Anuj"; // global 
+        document.write(myName);
+        console.log(myName);
+
+        //js execution (global and local(block)scope)
+        function hello(){
+            var num= 242343223; // local or block level
+
+            console.log(num);
+        }
+        hello();
+        
+        // from ES6..let and const
+        let msg="Hello World";
+        console.log(msg);
+
+        const msg2="thanks";
+        console.log(msg2);
+
+    </script>
+    
+</body>
+</html>

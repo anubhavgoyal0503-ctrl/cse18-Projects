@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Function : block of code to pperform
+      function demo() {
+        console.log("hello ABES");
+      }
+      // demo();
+      // // with perameter
+      // function cal( a,b){
+      //     var num1 = a;
+      //     var num2 = b;
+      //     console.log("addition of two variable :" +(num1+num2));
+
+      // }
+      // cal(3,5);
+      //     // }
+      //     // cal(3,5);
+
+      // // with default para
+      // var num1 =a ;
+      // var num2  =b ;
+      function add(a, b = 5) {
+        var num1 = a;
+        var num2 = b;
+        var res1 = num1 + num2;
+        console.log("Addition is " + res1);
+      }
+      //     // // with default para
+      //     // var num1 =a ;
+      //     // var num2  =b ;
+      //     function add(a,b=5){
+      //          var num1 =a ;
+      //     var num2  =b ;
+      //         var res1 = num1 + num2;
+      //         console.log("Addition is "+res1);
+      //     }
+
+      function sub(a, b = 9) {
+        var num1 = a;
+        var num2 = b;
+        var res2 = num1 - num2;
+        console.log("subtraction is " + res2);
+      }
+      function multi(a, b = 8) {
+        var num1 = a;
+        var num2 = b;
+        var res3 = num1 * num2;
+        console.log("multiplication is " + res3);
+      }
+      function div(a, b = 6) {
+        var num1 = a;
+        var num2 = b;
+        var res4 = num1 / num2;
+        console.log("division is " + res4);
+      }
+      add(10, 23);
+      sub(65, 3);
+      //      function sub(a,b=9){
+      //          var num1 =a ;
+      //     var num2  =b ;
+      //         var res2 = num1 - num2;
+      //         console.log("subtraction is "+res2);
+      //     }
+      //      function multi(a,b=8){
+      //          var num1 =a ;
+      //     var num2  =b ;
+      //         var res3 = num1 * num2;
+      //         console.log("multiplication is "+res3);
+      //     }
+      //      function div(a,b=6){
+      //          var num1 =a ;
+      //     var num2  =b ;
+      //         var res4 = num1 / num2;
+      //         console.log("division is "+res4);
+      //     }
+      //     add(10,23);
+      //     sub(65,3);
+
+      div(38);
+      multi(20);
+      //     div(38);
+      //     multi(20);
+
+      let demo1 = function () {
+        console.log("hello abes");
+      };
+      demo1();
+      //    let demo1 = function(){
+      //     console.log("hello abes");
+      //    }
+      //    demo1();
+
+      //   let  demo2 = ()=>{
+      //     console.log("Dravin Chandra")
+      //   }
+      //   demo2();
+      //   //single line function
+      //   let demo3=()=>console.log("hello java");
+      //   demo3();
+      //   //immediate function anonumous function
+      //   (function(){
+      //     console.log("life is js")
+      //   })();
+      //   //call  Back Function :-
+      //   function addR(callback){
+      //     var num1 = a;
+      //     var num2 =b;
+      //     var res= num1 +num2;
+      //     callback(res)
+      //   }
+      //   function result(res){
+      //     console.log("Addition of "+res);
+      //   }
+      //   addR(result);
+
+      //   promise
+      let myPromise = new Promise(function (resolve, reject) {
+        let age = 25;
+
+        let demo2 = () => {
+          console.log("Dravin Chandra");
+        };
+        demo2();
+        //single line function
+        let demo3 = () => console.log("hello java");
+        demo3();
+        if (age >= 18) {
+          resolve("valid age");
+        } else {
+          reject("wait for next year");
+        }
+      });
+
+      myPromise
+        .then((result) => console.log(result))
+        .catch((error) => console.log(error))
+        .finally(() => console.log("done"));
+
+      async function userData() {
+        try {
+          let respone = fetch("https://dummyjson.com/products");
+          let responseData = await respone.josn();
+          console.log(responseData);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
+  </body>
+</html>
